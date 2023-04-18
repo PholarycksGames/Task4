@@ -8,7 +8,7 @@ public class AddHealth : MonoBehaviour
     private int healthAdded = 1;
     private void OnTriggerEnter2D(Collider2D other)
     {
-        destroyOnTrigger2DScript.health += healthAdded;
+        destroyOnTrigger2DScript.currentHealth += healthAdded;
         Destroy(gameObject);
     }
 }

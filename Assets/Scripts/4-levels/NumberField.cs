@@ -15,12 +15,12 @@ public class NumberField : MonoBehaviour
     private void Start()
     {
         livesText = GetComponent<TextMeshPro>();
-        livesText.text = destroyOnTrigger2DScript.health.ToString();
+        livesText.text = destroyOnTrigger2DScript.currentHealth.ToString();
     }
 
     private void Update()
     {
-        livesText.text = destroyOnTrigger2DScript.health.ToString();
+        livesText.text = destroyOnTrigger2DScript.currentHealth.ToString();
     }
 
     public int GetNumber()
