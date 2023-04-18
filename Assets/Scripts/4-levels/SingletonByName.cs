@@ -18,7 +18,8 @@ public class SingletonByName : MonoBehaviour
         if (otherObjectsWithSameName.Length > 1)
         {
             Destroy(gameObject);
-        } else
+        }
+        else
         {
             Object.DontDestroyOnLoad(gameObject);
         }

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 /**
  * This component destroys its object whenever it triggers a 2D collider with the given tag.
@@ -14,8 +12,8 @@ public class DestroyOnTrigger2D : MonoBehaviour
     {
         if (other.tag == triggeringTag && enabled)
         {
-                Destroy(this.gameObject);
-                Destroy(other.gameObject);
+            Destroy(this.gameObject);
+            Destroy(other.gameObject);
         }
     }
 

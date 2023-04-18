@@ -4,7 +4,7 @@
  * This component spawns the given laser-prefab whenever the player clicks a given key.
  * It also updates the "scoreText" field of the new laser.
  */
-public class LaserShooter: ClickSpawner
+public class LaserShooter : ClickSpawner
 {
     [SerializeField] NumberField scoreField;
 
@@ -15,7 +15,7 @@ public class LaserShooter: ClickSpawner
         ScoreAdder newObjectScoreAdder = newObject.GetComponent<ScoreAdder>();
         if (newObjectScoreAdder)
             newObjectScoreAdder.SetScoreField(scoreField);
-            
+
         return newObject;
     }
 }
