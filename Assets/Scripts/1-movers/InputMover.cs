@@ -1,18 +1,15 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
 /**
  * This component moves its object when the player clicks the arrow keys.
  */
-public class InputMover: MonoBehaviour
+public class InputMover : MonoBehaviour
 {
     [Tooltip("Speed of movement, in meters per second")]
     [SerializeField] float speed = 10f;
     [SerializeField] InputAction moveHorizontal = new InputAction(type: InputActionType.Button);
-    [SerializeField] InputAction moveVertical  = new InputAction(type: InputActionType.Button);
+    [SerializeField] InputAction moveVertical = new InputAction(type: InputActionType.Button);
 
     void OnEnable()
     {
