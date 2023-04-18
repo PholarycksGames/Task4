@@ -6,7 +6,8 @@ using UnityEngine;
  * It allows to feed an integer number to the text field.
  */
 [RequireComponent(typeof(TextMeshPro))]
-public class NumberField : MonoBehaviour {
+public class NumberField : MonoBehaviour
+{
     private int number;
     private TextMeshPro livesText;
     [SerializeField] DestroyOnTrigger2D destroyOnTrigger2DScript;
@@ -22,16 +23,19 @@ public class NumberField : MonoBehaviour {
         livesText.text = destroyOnTrigger2DScript.health.ToString();
     }
 
-    public int GetNumber() {
+    public int GetNumber()
+    {
         return this.number;
     }
 
-    public void SetNumber(int newNumber) {
+    public void SetNumber(int newNumber)
+    {
         this.number = newNumber;
         GetComponent<TextMeshPro>().text = newNumber.ToString();
     }
 
-    public void AddNumber(int toAdd) {
+    public void AddNumber(int toAdd)
+    {
         SetNumber(this.number + toAdd);
     }
 }
