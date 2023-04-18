@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AddHealth : MonoBehaviour
 {
-    [SerializeField] DestroyOnTrigger2D destroyOnTrigger2DScript;
+    [SerializeField] PlayerDestroyOnTrigger2D destroyOnTrigger2DScript;
     private int healthAdded = 1;
     private void OnTriggerEnter2D(Collider2D other)
     {

@@ -10,17 +10,18 @@ public class NumberField : MonoBehaviour
 {
     private int number;
     private TextMeshPro livesText;
-    [SerializeField] DestroyOnTrigger2D destroyOnTrigger2DScript;
+    [SerializeField] PlayerDestroyOnTrigger2D PlayerdestroyOnTrigger2DScript;
 
     private void Start()
     {
         livesText = GetComponent<TextMeshPro>();
-        livesText.text = destroyOnTrigger2DScript.currentHealth.ToString();
+        livesText.text = PlayerdestroyOnTrigger2DScript.currentHealth.ToString();
     }
 
     private void Update()
     {
-        livesText.text = destroyOnTrigger2DScript.currentHealth.ToString();
+        livesText.text = PlayerdestroyOnTrigger2DScript.currentHealth.ToString();
+        Debug.Log(PlayerdestroyOnTrigger2DScript.currentHealth.ToString());
     }
 
     public int GetNumber()
