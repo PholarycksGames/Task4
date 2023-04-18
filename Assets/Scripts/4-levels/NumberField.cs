@@ -8,6 +8,19 @@ using UnityEngine;
 [RequireComponent(typeof(TextMeshPro))]
 public class NumberField : MonoBehaviour {
     private int number;
+    private TextMeshPro livesText;
+    [SerializeField] DestroyOnTrigger2D destroyOnTrigger2DScript;
+
+    private void Start()
+    {
+        livesText = GetComponent<TextMeshPro>();
+        livesText.text = destroyOnTrigger2DScript.health.ToString();
+    }
+
+    private void Update()
+    {
+        livesText.text = destroyOnTrigger2DScript.health.ToString();
+    }
 
     public int GetNumber() {
         return this.number;
